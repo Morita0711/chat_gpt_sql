@@ -16,14 +16,14 @@ export const config = {
   runtime: "edge",
 };
 
-let prompt = myVariable
+let prompt = '';
 let message_junk = ``;
 
 const handler = async (req: Request) => {
   
   const { messageText } = (await req.json()) as RequestData;
 
-  message_junk += `\n${messageText} \n` ;
+  message_junk += `please provide me sql statement below \n${messageText} \n` ;
 
   if (!messageText) {
     return new Response(``, { status: 400 });
@@ -41,7 +41,7 @@ const handler = async (req: Request) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: 'Bearer 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',
+      Authorization: 'Bearer '+process.env.OPENAI_API_KEY,
     },
     body: JSON.stringify(config)
   })

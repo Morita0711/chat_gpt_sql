@@ -109,10 +109,6 @@ const Container = () => {
           
             <div className={`flex gap-8 items-center justify-center h-[10vh] relative header-${darkMode}`}>
                 <h1 className={`text-${darkMode} py-4 text-2xl  font-bold  text-center py-7`}>ChatGPT</h1>
-                <input id="fileButton" type="file" hidden onChange={onFileChange} />
-                <button onClick={fileUpload}>
-                    Upload
-                </button>
             </div>
             <div className={`container-bg-${darkMode}`}>
                 <div className='container mx-auto px-12 max-sm:px-6 py-6 overflow-auto h-[80vh] chat-container' ref={scrollContainer}>
