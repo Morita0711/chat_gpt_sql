@@ -108,7 +108,7 @@ const Container = () => {
         <div className={`bg-${darkMode}`}>
           
             <div className={`flex gap-8 items-center justify-center h-[10vh] relative header-${darkMode}`}>
-                <h1 className={`text-${darkMode} py-4 text-2xl  font-bold  text-center py-7`}>ChatGPT</h1>
+                <h1 className={`text-${darkMode} py-4 text-2xl  font-bold  text-center py-7`}>Text 2 Sql</h1>
             </div>
             <div className={`container-bg-${darkMode}`}>
                 <div className='container mx-auto px-12 max-sm:px-6 py-6 overflow-auto h-[80vh] chat-container' ref={scrollContainer}>
